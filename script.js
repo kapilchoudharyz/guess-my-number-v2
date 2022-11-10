@@ -34,6 +34,8 @@ document.querySelector('.check').addEventListener('click', function () {
     //When there is no input
     // document.querySelector('.message').textContent = 'Please insert an number';
     displayMessage( 'Please insert an number')
+    document.querySelector('h1').style.color = 'red'
+    document.querySelector('.message').style.color = 'red'
   } //We used !guess because it is executed when condition is true.if we dont put a number then guess becomes 0 and 0 is the the falsy value.So we used !guess here so that the falsy value can be changed to true to execute the if statement.
   else if (secretNumber === guess) {
     //When the player wins
@@ -71,6 +73,8 @@ document.querySelector('.check').addEventListener('click', function () {
       displayMessage('💥Sorry you lost the game')
       document.querySelector('.score').textContent = 0;
     }
+    document.querySelector('h1').style.color = 'red'
+    document.querySelector('.message').style.color = 'red'
    }  // else if (secretNumber > guess) {
   //   //When input is less than generated number
   //   if (score > 1) {
